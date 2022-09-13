@@ -1,6 +1,6 @@
 resource "aws_instance" "cicd-server1" {
   ami                         = "ami-0b89f7b3f054b957e"
-  instance_type               = "t2.micro"
+  instance_type               = "c3.xlarge"
   vpc_security_group_ids      = [aws_security_group.apache.id]
 #   vpc_id                      = "vpc-03ed34629d50653ca"
   associate_public_ip_address = true
