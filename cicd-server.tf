@@ -40,7 +40,6 @@ resource "aws_instance" "apache-server1" {
   key_name                    = aws_key_pair.deployer.id
 user_data = <<-EOF
   #! /bin/bash
-  sudo su -
    yum install httpd -y
    yum update httpd -y
    systemctl start httpd
